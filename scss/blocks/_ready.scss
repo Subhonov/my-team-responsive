@@ -1,0 +1,47 @@
+.ready-section {
+    padding: 76px 0;
+    background-color: #F67E7E;
+    background-image: url(../../images/readiy-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 200px 122px;
+    background-position: bottom left;
+}
+.ready__content {
+    @include display($items: center, $space:center, $gap: 260px);
+}
+.ready__content--title {
+    @include textStyle($FW: 700,$FS: 48px,$LH: 48px,$CASE: none,$MB:0px,$CLR:#012F34);
+}
+.ready__content--link {
+    width: 153px;
+    padding: 10px 0px;
+    text-align: center;
+    border-radius:25px ;
+    border: 2px solid #012F34;
+    @include textStyle($FW: 600,$FS: 18px,$LH: 28px,$CASE: none,$MB:0px,$CLR:#012F34);
+    transition: 0.3s all;
+    &:hover{
+        color: white;
+        background-color: #012F34;
+    }
+}
+@media (max-width:852px){
+    .ready-section{
+        padding: 76px 0;
+    }
+    .ready__content {
+        @include display($items: center, $space:center, $gap: 84px);
+    }
+    .ready__content--title {
+        @include textStyle($FW: 700,$FS: 32px,$LH: 32px,$CASE: none,$MB:0px,$CLR:#012F34);
+    }
+}
+@media (max-width:510px){
+    .ready-section{
+        padding: 83px 0;
+    }
+    .ready__content {
+        flex-direction: column;
+        @include display($items: center, $space:start, $gap: 24px);
+    }
+}

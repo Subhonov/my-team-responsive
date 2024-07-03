@@ -1,0 +1,123 @@
+.hero-section {
+    background-image: url(../../images/main-img1.svg);
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+    background-position: calc(-8%) top;
+}
+.hero {
+    padding-bottom: 250px;
+    @include display($items: center, $space: space-between, $gap: 0px);
+    background-image: url(../../images/main-img2.svg);
+    background-size: 358px 100px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+.hero__title-wrapper {
+    max-width: 622px;
+}
+.hero__title {
+    @include textStyle(
+        $FW: 700,
+        $FS: 100px,
+        $LH: 100px,
+        $CASE: none,
+        $MB: 0px,
+        $CLR: $--white-clr
+    );
+}
+.hero__title--color {
+    color: #f67e7e;
+}
+.hero__text-wrapper {
+    max-width: 445px;
+}
+.hero__text-top-line {
+    width: 50px;
+    height: 4px;
+    background-color: #79c8c7;
+    display: inline-block;
+}
+.hero__text {
+    margin-top: 79px;
+    @include textStyle(
+        $FW: 600,
+        $FS: 18px,
+        $LH: 28px,
+        $CASE: none,
+        $MB: 0px,
+        $CLR: $--white-clr
+    );
+}
+/* -------tablet start----- */
+@media only screen and (max-width: 800px) {
+    .hero-section {
+        background-image: none;
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        background-position: center bottom;
+        @include display($items: center, $space: start, $gap: 24px);
+    }
+    .hero__title-wrapper {
+        max-width: 100%;
+    }
+    .hero__title {
+        @include textStyle(
+            $FW: 700,
+            $FS: 64px,
+            $LH: 56px,
+            $CASE: none,
+            $MB: 0px,
+            $CLR: $--white-clr
+        );
+    }
+    .hero__text-top-line {
+        display: none;
+    }
+    .hero__text {
+        @include textStyle(
+            $FW: 600,
+            $FS: 15px,
+            $LH: 28px,
+            $CASE: none,
+            $MB: 0px,
+            $CLR: $--white-clr
+        );
+    }
+    .hero__title--color {
+        color: #f67e7e;
+    }
+}
+/* -------tablet start----- */
+/* ---------mobile start----- */
+@media only screen and (max-width: 600px) {
+    .hero {
+        padding-bottom: 197px;
+        @include display($items: center, $space: start, $gap: 18px);
+    }
+    .hero__title-wrapper,
+    .hero__text-wrapper {
+        width: 100%;
+    }
+    .hero__title {
+        @include textStyle(
+            $FW: 700,
+            $FS: 40px,
+            $LH: 40px,
+            $CASE: none,
+            $MB: 0px,
+            $CLR: $--white-clr
+        );
+    }
+    .hero__title--color {
+        color: #f67e7e;
+    }
+}
+@media (max-width: 400px) {
+    .hero {
+        background-size: 100%;
+        background-position: center center;
+    }
+}
+/* ---------mobile end----- */

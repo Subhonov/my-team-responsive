@@ -1,0 +1,41 @@
+.site-footer {
+    padding: 48px 0;
+    background-color: #002529;
+}
+.footer {
+    @include display($items: center, $space: space-between, $gap:0px);
+}
+.footer__logo--content{
+    @include display($items: center, $space:center, $gap:125px);
+}
+.footer__logo--cart {
+    @include display($items: center, $space: start, $gap:40px);
+}
+.footer__logo--link {
+    margin-top: 25px;
+    @include textStyle($FW: 600,$FS: 18px,$LH: 28px,$CASE: lowercase,$MB:0px,$CLR: $--white-clr);
+}
+.footer__wrapper--address {
+    @include textStyle($FW: 600,$FS: 15px,$LH: 25px,$CASE: lowercase,$MB:0px,$CLR:#94A3A4);
+}
+.footer__wrapper--phone {
+    @include textStyle($FW: 600,$FS: 15px,$LH: 25px,$CASE: lowercase,$MB:0px,$CLR:#94A3A4);
+}
+.footer__content-wrapp {
+    flex-direction: column;
+    justify-content: end;
+}
+.footer__content-list {
+    @include display($items: center, $space: end, $gap:16px);
+}
+.footer__content--span {
+    margin-top: 51px;
+    display: block;
+    font-style: normal;
+    @include textStyle($FW: 600,$FS: 15px,$LH: 25px,$CASE: lowercase,$MB:0px,$CLR:#94A3A4);
+}
+@media (max-width:573px){
+    .site-footer {
+        padding: 56px 0;
+    }
+}

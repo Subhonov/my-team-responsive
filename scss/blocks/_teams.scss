@@ -1,0 +1,100 @@
+.teams-section {
+    padding: 140px 0;
+    background-color: #012F34;
+    background-image: url(../../images/build-bg1.svg);
+    background-repeat: no-repeat;
+    background-size: 100px 244px;
+    background-position: right bottom;
+}
+.team__content {
+    @include display($items: start, $space: space-between, $gap: 0px);
+}
+.teams__content--wrapper {
+    width: 445px;
+}
+.teams__inline {
+    width: 50px;
+    height: 4px;
+    margin-bottom: 54px;
+    display: inline-block;
+    background-color: #f67e7e;
+}
+.teams__title {
+    @include textStyle(
+        $FW: 700,
+        $FS: 48px,
+        $LH: 48px,
+        $CASE: capitalize,
+        $MB: 0px,
+        $CLR: $--white-clr
+    );
+}
+.teams__itim {
+    @include display($items: center, $space: start, $gap: 23px);
+}
+.teams__itim + .teams__itim {
+    margin-top: 32px;
+}
+.teams__itim-card {
+    width: 445px;
+}
+.teams__itim-title {
+    @include textStyle(
+        $FW: 700,
+        $FS: 18px,
+        $LH: 28px,
+        $CASE: capitalize,
+        $MB: 16px,
+        $CLR: #f67e7e
+    );
+}
+.teams__itim-text {
+    @include textStyle(
+        $FW: 600,
+        $FS: 15px,
+        $LH: 25px,
+        $CASE: capitalize,
+        $MB: 0px,
+        $CLR: $--white-clr
+    );
+}
+@media (max-width: 906px) {
+    .teams-section {
+        padding: 136px 0 56px;
+        background-position: top right;
+    }
+    .team__content {
+        flex-direction: column;
+        @include display($items: start, $space: start, $gap: 64px);
+    }
+    .teams__title,
+    .teams__content--wrapper,.teams__itim-card {
+        width: 100%;
+    }
+    .teams__title {
+        @include textStyle(
+            $FW: 700,
+            $FS: 32px,
+            $LH: 32px,
+            $CASE: none,
+            $MB: 0px,
+            $CLR: $--white-clr
+        );
+    }
+}
+@media (max-width: 510px) {
+    .teams-section {
+        padding: 100px 0 64px;
+    }
+    .team__content {
+        flex-direction: column;
+        @include display($items: start, $space: start, $gap: 64px);
+    }
+    .teams__content--wrapper {
+        max-width: 70%;
+    }
+    .teams__itim {
+        flex-direction: column;
+        text-align: center;
+    }
+}
